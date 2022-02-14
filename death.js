@@ -12,8 +12,7 @@ const { format } = new Intl.DateTimeFormat(
 );
 
 setInterval(() => {
-	const now = new Date();
-	const secondsToDeath = milsToSeconds(Date.now() - timeLeftDate.getMilliseconds());
+	const secondsToDeath = milsToSeconds(timeLeftDate.getMilliseconds() - Date.now());
 	const minutesToDeath = secondsToMinutes(secondsToDeath);
 	const hoursToDeath = minToHours(minutesToDeath);
 	const daysToDeath = hoursToDays(hoursToDays);
@@ -21,7 +20,7 @@ setInterval(() => {
 
 	timeLeftEl.textContent = `
 		Death date: ${format(timeLeftDate)}
-		${daysToDeath}d ${hoursToDeath}h ${minutesToDeath}m ${secondsToDeath}s
+		${parseInt(daysToDeath)}d ${parseInt(hoursToDeath)}h ${parseInt(minutesToDeath)}m ${parseInt(secondsToDeath)}s
 		`;
 }, 1000);
 
