@@ -9,6 +9,7 @@ const { format } = new Intl.DateTimeFormat(
 		month: "long",
 		year: "numeric",
 		weekday: "long",
+		localeMatcher: "best fit",
 	}
 );
 
