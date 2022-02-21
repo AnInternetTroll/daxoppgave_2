@@ -8,6 +8,7 @@ const { format } = new Intl.DateTimeFormat(
 		day: "2-digit",
 		month: "long",
 		year: "numeric",
+		weekday: "long",
 	}
 );
 
